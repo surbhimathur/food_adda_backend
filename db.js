@@ -7,7 +7,7 @@ module.exports=()=>{
         useUnifiedTopology:true,
     };
     try{
-        mongoose.connect(process.env.DB,connectionParams);
+        mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.0vw0p.mongodb.net/?retryWrites=true&w=majority`,connectionParams);
         console.log("connected to db successfully");
     }
     catch(error){
